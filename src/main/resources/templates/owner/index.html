@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+<body>
+<h1 th:text="IndexPage">Index page</h1>
+<table>
+    <thead>
+    <tr>
+        <th th:text="'ID'">Id  </th>
+        <th th:text="'FIRST NAME'">first name  </th>
+        <th th:text="'LAST NAME'">last name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="owner:${ownerObj}">
+        <td th:text="${owner.id}">Id  </td>
+        <td th:text="${owner.firstName}">first name  </td>
+        <td th:text="${owner.lastName}">last name</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
